@@ -34,7 +34,7 @@ pipeline {
         stage("Push Docker Image") {
             steps {
                 script {
-                    docker.withRegistry('https://gcr.io', 'gcr:kuberneteslogin') {
+                    docker.withRegistry('https://eu.gcr.io', 'gcr:kuberneteslogin') {
                             myimage.push("${env.BUILD_ID}")
                     }
                 }
