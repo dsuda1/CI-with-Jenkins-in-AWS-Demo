@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'snappy-benefit-260010'
         CLUSTER_NAME = 'cluster-kubernetes-1'
         LOCATION = 'europe-west1-b'
-        CREDENTIALS_ID = 'kuberneteslogin'
+        CREDENTIALS_ID = 'kubejen'
     }
     stages {
         stage("Checkout code") {
