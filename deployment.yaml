@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: dsuda1/ubudev:tagversion
+        image: gcr.io/snappy-benefit-260010/kubernetesrepos:tagversion
         ports:
         - containerPort: 8080
 ---
