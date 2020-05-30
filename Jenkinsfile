@@ -34,7 +34,7 @@ pipeline {
         stage("Push Docker Image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'kuberneteslogin') {
                             myimage.push("${env.BUILD_ID}")
                     }
                 }
