@@ -33,16 +33,3 @@ spec:
     targetPort: 8080
   selector:
     app: myapp
----
-apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: myapp
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: myapp
-  minReplicas: 1
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 3
