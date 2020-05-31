@@ -27,14 +27,14 @@ pipeline {
         stage("Build Docker Image") {
             steps {
                 script {
-                    myimage = docker.build("gcr.io/snappy-benefit-260010/kubernetesrepos:${env.BUILD_ID}")
+                    myimage = docker.build("dsuda1/ubudev:${env.BUILD_ID}")
                 }
             }
         }
         stage("Push Docker Image") {
             steps {
                 script {
-                    docker.withRegistry('https://eu.gcr.io', 'gcr:kuberneteslogin') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'docker') {
                             myimage.push("${env.BUILD_ID}")
                     }
                 }
